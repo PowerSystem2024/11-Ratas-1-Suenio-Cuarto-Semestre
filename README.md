@@ -3,7 +3,6 @@ Repositorio de los estudiantes de "11 Ratas 1 Sueño", de la Tecnicatura Univers
 # Facultad 🏛️
 Universidad Tecnológica de San Rafael, Mendoza, Argentina.
 # Integrantes 👩‍💻👨‍💻
-- Rocio Scagliola
 - Pablo Ibañez
 - Ignacio Noguerol
 - Christian Bonilla
