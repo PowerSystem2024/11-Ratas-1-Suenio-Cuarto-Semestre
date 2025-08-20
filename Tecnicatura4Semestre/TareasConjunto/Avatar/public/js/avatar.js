@@ -18,7 +18,7 @@ function iniciarJuego() {
     document.getElementById('boton-jugar').style.display = 'none';
     document.getElementById('seleccionar-personaje').style.display = 'block';
 
-    let botonPunio = document.getElementById('boton-punio') //Ahora creamos un escuchador de eventos
+    let botonPunio = document.getElementById('boton-punio') //Ahora creamos acciónes 
     botonPunio.addEventListener('click', ataquePunio)
     let botonPatada = document.getElementById('boton-patada')
     botonPatada.addEventListener('click', ataquePatada)
@@ -39,10 +39,10 @@ function mostrarReglas() {
 
 function seleccionarPersonajeJugador() {
     let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
-    sectionSeleccionarAtaque.style.display = 'block'; //mostramos
+    sectionSeleccionarAtaque.style.display = 'block'; //mostramos ataques
     document.getElementById('boton-reglas').style.display = 'none';
     let sectionSeleccionarPersonaje = document.getElementById('seleccionar-personaje')
-    sectionSeleccionarPersonaje.style.display = 'none' //Ocultamos
+    sectionSeleccionarPersonaje.style.display = 'none' //Ocultamos personajes
    
     let inputZuko = document.getElementById('zuko')
     let inputKatara = document.getElementById('katara')
@@ -51,7 +51,7 @@ function seleccionarPersonajeJugador() {
     let spanPersonajeJugador = document.getElementById('personaje-jugador')
 
 
-    document.getElementById("reglas-del-juego").style.display = "none";
+    document.getElementById("reglas-del-juego").style.display = "none"; //no boton reglas
     document.getElementById('boton-reglas').style.display = 'none';
 
     if (inputZuko.checked) {
@@ -63,9 +63,8 @@ function seleccionarPersonajeJugador() {
     } else if (inputToph.checked) {
         spanPersonajeJugador.innerHTML = 'Toph'
     } else {
-        // Mostrar un mensaje temporal en la pantalla si no se ha seleccionado un personaje
-       
-        let mensajeError = document.createElement("p")
+        
+        let mensajeError = document.createElement("p") // Mostrar un mensaje temporal en la pantalla si no se ha seleccionado un personaje
         mensajeError.innerHTML = 'Selecciona un personaje'
         mensajeError.style.color = "red"
 
@@ -73,7 +72,6 @@ function seleccionarPersonajeJugador() {
         sectionSeleccionarPersonaje.appendChild(mensajeError)
 
         // Eliminar el mensaje de error después de 2 segundos
-
         setTimeout(() => {
             sectionSeleccionarPersonaje.removeChild(mensajeError)
         }, 2000)
@@ -99,17 +97,17 @@ function seleccinarPersonajeEnemigo() { //esta función va dentro de seleccionar
     }
 }
 
-function ataquePunio() { //Modificamos la variable global ataqueJugador
+function ataquePunio() { //Modificamos la variable global ataqueJugador a los 3 ataques
     ataqueJugador = 'Punio'
     ataqueAleatorioEnemigo()
 }
 
-function ataquePatada() { //Modificamos la variable global ataqueJugador
+function ataquePatada() { 
     ataqueJugador = 'Patada'
     ataqueAleatorioEnemigo()
 }
 
-function ataqueBarrida() { //Modificamos la variable global ataqueJugador
+function ataqueBarrida() { 
     ataqueJugador = 'Barrida'
     ataqueAleatorioEnemigo()
 }
@@ -175,7 +173,7 @@ function crearMensajeFinal(resultado) {
     parrafo.innerHTML = resultado
 
     sectionMensaje.appendChild(parrafo)
-    let botonPunio = document.getElementById('boton-punio') //Ahora creamos un escuchador de eventos
+    let botonPunio = document.getElementById('boton-punio') //Ahora creamos un accionador de eventos
     botonPunio.disabled = true
     let botonPatada = document.getElementById('boton-patada')
     botonPatada.disabled = true
