@@ -1,4 +1,4 @@
-package UTN.domain;
+package UTN.dominio;
 
 public class Estudiante {
     private int idEstudiante;
@@ -7,21 +7,21 @@ public class Estudiante {
     private String telefono;
     private String email;
 
-    public Estudiante() { //Constructor vacio
-    }
+    public Estudiante(){} //vacio
 
-    public Estudiante(int idEstudiante) {
+    public Estudiante(int idEstudiante){
         this.idEstudiante = idEstudiante;
     }
 
-    public Estudiante(String nombre, String apellido, String telefono, String email) {
+    //Constructor para ingresar nuevo estudiante
+    public Estudiante(String nombre, String apellido, String telefono,String email){
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
         this.email = email;
     }
-
-    public Estudiante(int idEstudiante, String nombre, String apellido, String telefono, String email) {
+    //Constructor para modificar
+    public Estudiante(int idEstudiante, String nombre, String apellido, String telefono, String email){
         this.idEstudiante = idEstudiante;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -80,3 +80,4 @@ public class Estudiante {
                 '}';
     }
 }
+//video 1 de clase 11 de proyexto estudiantes parte 2
