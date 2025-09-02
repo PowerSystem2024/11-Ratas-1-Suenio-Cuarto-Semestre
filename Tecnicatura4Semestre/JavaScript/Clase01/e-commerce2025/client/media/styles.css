@@ -124,3 +124,112 @@ body{
   cursor: pointer;
   
 }
+
+.buyButton:hover{
+  background-color: #dfe211;
+}
+.buyButton:active{
+  transform: scale(0.95);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Carrito */
+
+.modal-body {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.product{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 15px;
+}
+
+.product-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.product-info h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.quantity-btn-decrease,
+.quantity-btn-increase {
+  background-color: #eee;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.quantity-btn-decrease:hover,
+.quantity-btn-increase:hover {
+  background-color: #ccc;
+}
+
+.quantity-input {
+  font-weight: bold;
+}
+
+.price {
+  width: 80px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.delete-product {
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 1.3rem;
+  color: #c0392b;
+}
+
+
+.modal-footer {
+  border-top: 2px solid #eee;
+  padding-top: 15px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-footer h3 {
+  margin: 0;
+}
+
+#checkout-btn {
+  padding: 10px 20px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+#checkout-btn:hover {
+  background-color: #219150;
+}

@@ -1,6 +1,6 @@
 import {PRODUCTOS} from "../js/products.js";
 const SHOP_CONTENT = document.getElementById("shopContent");
-const CART = [];
+export const CART = [];
 
 PRODUCTOS.forEach((producto) => {
   const productCard = document.createElement("div");
@@ -21,14 +21,20 @@ PRODUCTOS.forEach((producto) => {
 
     productCard.append(buyButton);
 
-    buyButton.addEventListener("click", () =>{
+    buyButton.addEventListener("click", () => {
+      const existingProduct = CART.find(item => item.id === producto.id);
+
+      if (existingProduct) {
+        existingProduct.quanty += 1;
+      } else {
         CART.push({
-            id: producto.id,
-            productName: producto.name,
-            price: producto.price,
-            quanty: producto.quanty,
-            img: producto.image,
-        })
-        console.log(CART);
-    })
+          id: producto.id,
+          name: producto.name,
+          price: producto.price,
+          quanty: 1,
+          image: producto.image,
+        });
+    }
+    console.log(CART);
+  });
 });
