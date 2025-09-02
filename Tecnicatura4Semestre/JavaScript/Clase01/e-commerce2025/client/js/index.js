@@ -1,5 +1,6 @@
 import {PRODUCTOS} from "../js/products.js";
 const SHOP_CONTENT = document.getElementById("shopContent");
+const CART = [];
 
 PRODUCTOS.forEach((producto) => {
   const productCard = document.createElement("div");
@@ -13,4 +14,21 @@ PRODUCTOS.forEach((producto) => {
   `;
 
   SHOP_CONTENT.appendChild(productCard);
+
+  const buyButton = document.createElement("button");
+    buyButton.innerText = "Comprar";
+    buyButton.classList.add("buyButton");
+
+    productCard.append(buyButton);
+
+    buyButton.addEventListener("click", () =>{
+        CART.push({
+            id: producto.id,
+            productName: producto.name,
+            price: producto.price,
+            quanty: producto.quanty,
+            img: producto.image,
+        })
+        console.log(CART);
+    })
 });
