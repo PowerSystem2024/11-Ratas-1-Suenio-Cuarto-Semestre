@@ -1,30 +1,37 @@
-export const PRODUCTOS = [
-  {
-    id: 1,
-    name: "Banana",
-    price: 200,
-    image: "img/banana.jpg",
-    quanty: 10,
-  },
-  {
-    id: 2,
-    name: "Manzana",
-    price: 300,
-    image: "img/manzana-roja.jpg",
-    quanty: 5,
-  },
-  {
-    id: 3,
-    name: "Naranja",
-    price: 200,
-    image: "img/naranja.jpg",
-    quanty: 8,
-  },
-  {
-    id: 4,
-    name: "Pomelo",
-    price: 250,
-    image: "img/pomelo-rosado.jpg",
-    quanty: 12,
-  }, 
-]
+const productos = [
+    {
+        id: 1,
+        productName: "Banana",
+        price: 480,
+        quanty: 1,
+        img: "media/banana.png",
+    },
+    {
+        id: 2,
+        productName: "Leche",
+        price: 950,
+        quanty: 1,
+        img: "media/leche.png",
+    },
+    {
+        id: 3,
+        productName: "Pollo",
+        price: 750,
+        quanty: 1,
+        img: "media/pollo.png",
+    },
+    {
+        id: 4,
+        productName: "Mayonesa",
+        price: 510,
+        quanty: 1,
+        img: "media/mayonesa.png",
+    },
+    {
+        id: 5,
+        productName: "Enlatados",
+        price: 280,
+        quanty: 1,
+        img: "media/enlatados.png",
+    },
+];
