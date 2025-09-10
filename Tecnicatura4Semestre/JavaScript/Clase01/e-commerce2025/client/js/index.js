@@ -1,40 +1,42 @@
-import {PRODUCTOS} from "../js/products.js";
-const SHOP_CONTENT = document.getElementById("shopContent");
-export const CART = [];
+const shopContent = document.getElementById("shopContent");
+const cart = []; //El carrito es un array vacío
 
-PRODUCTOS.forEach((producto) => {
-  const productCard = document.createElement("div");
-  productCard.classList.add("product-card");
+productos.forEach((product) =>{
+    const content = document.createElement("div");
+    content.innerHTML = `
+        <img src="${product.img}">
+        <h3>${product.productName}</h3>
+        <p>$ ${product.price} </p>
+        <p>Cantidad: ${product.quanty}</p>
+    `;
+    shopContent.append(content);
 
-  productCard.innerHTML = `
-    <img src="${producto.image}" alt="${producto.name}">
-    <h3>${producto.name}</h3>
-    <p>Precio: $${producto.price}</p>
-    <p>Cantidad: ${producto.quanty}</p>
-  `;
-
-  SHOP_CONTENT.appendChild(productCard);
-
-  const buyButton = document.createElement("button");
+    const buyButton = document.createElement("button");
     buyButton.innerText = "Comprar";
     buyButton.classList.add("buyButton");
 
-    productCard.append(buyButton);
+    // Agregamos el botón al contenido del producto
+    content.appendChild(buyButton);
 
-    buyButton.addEventListener("click", () => {
-      const existingProduct = CART.find(item => item.id === producto.id);
+    buyButton.addEventListener("click", () => { // Agregamos un evento click al botón para agregar el producto al carrito
+        const repeat = cart.some((repeatProduct) => repeatProduct.id === product.id);
 
-      if (existingProduct) {
-        existingProduct.quanty += 1;
-      } else {
-        CART.push({
-          id: producto.id,
-          name: producto.name,
-          price: producto.price,
-          quanty: 1,
-          image: producto.image,
-        });
-    }
-    console.log(CART);
-  });
+        if(repeat){
+            cart.map((prod)=> {
+                if(prod.id === product.id){
+                    prod.quanty++;
+                    displayCartCounter();
+                }
+            })
+        }else{
+            cart.push({
+                id: product.id,
+                productName: product.productName,
+                price: product.price,
+                quanty: product.quanty,
+                img: product.img
+            })
+            displayCartCounter();
+        }
+    })
 });

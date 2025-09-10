@@ -16,4 +16,5 @@ print(f"'b' Es de tipo NaN: {math.isnan(b)}")  # Imprime: True
 
 # Módulo Decimal
 c = Decimal('NaN')
-print(f"'c' Es de tipo NaN: {math.isnan(c)}")  
+
+print(f"'c' Es de tipo NaN: {math.isnan(c)}")
