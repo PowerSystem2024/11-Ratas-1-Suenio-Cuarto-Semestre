@@ -1,0 +1,38 @@
+🔹 Nombre del grupo
+
+11 Ratas 1 Sueño
+
+🔹 Integrantes del grupo
+
+Pablo Ibañez
+
+Ignacio Noguerol
+
+Christian Bonilla
+
+Daiana Jaldin
+
+Augusto Vernengo
+
+Ignacio Ibañez
+
+🔹 Tecnologías a utilizar
+
+Frontend: HTML, CSS, JavaScript
+
+🔹 Propósito del proyecto
+
+El proyecto consistirá en crear un juego basado en el universo de Avatar.
+El juego contará con interacciones dinámicas y reglas definidas, permitiendo que los jugadores elijan personajes, ejecuten acciones y sigan una mecánica clara de juego para lograr objetivos.
+
+🔹 Organización inicial del trabajo
+
+Diseño del juego: definir reglas, personajes, historia y mecánicas.
+
+Interfaz gráfica: maquetación en HTML y estilos en CSS.
+
+Lógica del juego: desarrollo de las interacciones y reglas con JavaScript.
+
+Pruebas: verificar jugabilidad, errores y ajustes.
+
+Entrega final: presentación y demostración del juego.
