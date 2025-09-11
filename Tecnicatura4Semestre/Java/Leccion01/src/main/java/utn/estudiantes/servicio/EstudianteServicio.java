@@ -3,7 +3,7 @@ package utn.estudiantes.servicio;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import utn.estudiantes.modelo.Estudiante;
+import utn.estudiantes.modelo.Estudiantes2024;
 import utn.estudiantes.repositorio.EstudianteRepositorio;
 
 import java.util.List;
@@ -14,24 +14,24 @@ public class EstudianteServicio implements IEstudianteServicio {
     private EstudianteRepositorio estudianteRepositorio;
 
     @Override
-    public List<Estudiante> listarEstudiantes() {
-        List<Estudiante> estudiantes = estudianteRepositorio.findAll();
+    public List<Estudiantes2024> listarEstudiantes() {
+        List<Estudiantes2024> estudiantes = estudianteRepositorio.findAll();
         return estudiantes;
     }
 
     @Override
-    public Estudiante buscarEstudiantePorId(Integer idEstudiante) {
-        Estudiante estudiante = estudianteRepositorio.findById(idEstudiante).orElse(null);
+    public Estudiantes2024 buscarEstudiantePorId(Integer idEstudiantes2024) {
+        Estudiantes2024 estudiante = estudianteRepositorio.findById(idEstudiantes2024).orElse(null);
         return estudiante;
     }
 
     @Override
-    public void guardarEstudiante(Estudiante estudiante) {
+    public void guardarEstudiante(Estudiantes2024 estudiante) {
         estudianteRepositorio.save(estudiante);
     }
 
     @Override
-    public void eliminarEstudiante(Estudiante estudiante) {
+    public void eliminarEstudiante(Estudiantes2024 estudiante) {
         estudianteRepositorio.delete(estudiante);
     }
 }
