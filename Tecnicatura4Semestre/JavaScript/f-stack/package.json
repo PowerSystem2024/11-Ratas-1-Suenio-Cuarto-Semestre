@@ -1,0 +1,23 @@
+{
+  "name": "f-stack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cros": "^1.1.0",
+    "express": "^4.21.2",
+    "express-promise-router": "^4.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "md5": "^2.3.0",
+    "morgan": "^1.10.1",
+    "pg": "^8.16.3",
+    "zod": "^4.1.9"
+  }
+}
