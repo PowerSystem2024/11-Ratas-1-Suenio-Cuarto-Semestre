@@ -2,9 +2,10 @@
   "name": "f-stack",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon .",
+    "start": "node ."
   },
   "keywords": [],
   "author": "",
@@ -19,5 +20,9 @@
     "morgan": "^1.10.1",
     "pg": "^8.16.3",
     "zod": "^4.1.9"
+  },
+  "devDependencies": {
+    "eslint": "^9.36.0",
+    "nodemon": "^3.1.10"
   }
 }
