@@ -9,5 +9,6 @@ Universidad Tecnológica de San Rafael, Mendoza, Argentina.
 - Daiana Jaldin
 - Augusto Vernengo
 - Ignacio Ibañez
+- Marianela Sanhueza
 # ¿Quiénes Somos?
 Un grupo de ratas entusiastas con la meta de seguir aprendiendo y mejorando, con el sueño de ser los mejores programadores.
