@@ -24,7 +24,6 @@ const juego = {
 class Avatar {
     constructor(nombre, foto, vida) {
         this.nombre = nombre
-        this.foto = foto
         this.vida = vida
         this.ataques = [] 
     }
@@ -36,7 +35,7 @@ let aang = new Avatar('Aang', './assets/Aang.png', 5)
 let toph = new Avatar('Toph', './assets/Toph.png', 5)
 
 zuko.ataques.push(
-    { nombre: 'Punio', id: 'boton-punio' },
+    { nombre: 'Punioo', id: 'boton-punio' },
     { nombre: 'Patada', id: 'boton-patada' },
     { nombre: 'Barrida', id: 'boton-barrida' }
 )
@@ -58,6 +57,9 @@ toph.ataques.push(
     { nombre: 'Patada', id: 'boton-patada' },
     { nombre: 'Barrida', id: 'boton-barrida' }
 )
+
+let personajes = [zuko, katara, aang, toph];
+let personajeJugador;
 
 function iniciarJuego() {
     
@@ -91,10 +93,23 @@ function seleccionarPersonajeJugador() {
     document.getElementById('boton-reglas').style.display = 'none';
     sectionSeleccionarPersonaje.style.display = 'none' 
 
-    if (inputZuko.checked) spanPersonajeJugador.innerHTML = 'Zuko'
-    else if (inputKatara.checked) spanPersonajeJugador.innerHTML = 'Katara'
-    else if (inputAang.checked) spanPersonajeJugador.innerHTML = 'Aang'
-    else if (inputToph.checked) spanPersonajeJugador.innerHTML = 'Toph'
+    if (inputZuko.checked) {
+        spanPersonajeJugador.innerHTML = 'Zuko'
+        personajeJugador = zuko
+    }
+        
+    else if (inputKatara.checked) {
+        spanPersonajeJugador.innerHTML = 'Katara'
+        personajeJugador = katara
+    }
+    else if (inputAang.checked) {
+        spanPersonajeJugador.innerHTML = 'Aang'
+        personajeJugador = aang
+    }
+    else if (inputToph.checked) {
+        spanPersonajeJugador.innerHTML = 'Toph'
+        personajeJugador = toph
+    }
     else {
         let mensajeError = document.createElement("p") 
         mensajeError.innerHTML = 'Selecciona un personaje'
@@ -105,7 +120,26 @@ function seleccionarPersonajeJugador() {
         reiniciarJuego()
         return
     }
+    mostrarAtaques(personajeJugador.ataques)
     seleccionarPersonajeEnemigo()
+}
+
+function mostrarAtaques(ataques) {
+    const contenedorAtaques = document.getElementById('contenedor-ataques')
+    contenedorAtaques.innerHTML = ""
+
+    ataques.forEach(ataque => {
+        let boton = document.createElement("button")
+        boton.id = ataque.id
+        boton.innerText = ataque.nombre
+        boton.addEventListener('click', () => ataqueJugador(ataque.nombre))
+        contenedorAtaques.appendChild(boton)
+    })
+}
+
+function ataqueJugador(nombreAtaque) {
+    juego.ataqueJugador = nombreAtaque
+    ataqueAleatorioEnemigo()
 }
 
 function seleccionarPersonajeEnemigo() { 
