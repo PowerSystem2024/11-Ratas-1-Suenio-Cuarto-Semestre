@@ -21,6 +21,44 @@ const juego = {
     vidasEnemigo: 3
 }
 
+class Avatar {
+    constructor(nombre, foto, vida) {
+        this.nombre = nombre
+        this.foto = foto
+        this.vida = vida
+        this.ataques = [] 
+    }
+}
+
+let zuko = new Avatar('Zuko', './assets/Zuko.png', 5)
+let katara = new Avatar('Katara', './assets/Katara.png', 5)
+let aang = new Avatar('Aang', './assets/Aang.png', 5)
+let toph = new Avatar('Toph', './assets/Toph.png', 5)
+
+zuko.ataques.push(
+    { nombre: 'Punio', id: 'boton-punio' },
+    { nombre: 'Patada', id: 'boton-patada' },
+    { nombre: 'Barrida', id: 'boton-barrida' }
+)
+
+katara.ataques.push(
+    { nombre: 'Punio', id: 'boton-punio' },
+    { nombre: 'Patada', id: 'boton-patada' },
+    { nombre: 'Barrida', id: 'boton-barrida' }
+)
+
+aang.ataques.push(
+    { nombre: 'Punio', id: 'boton-punio' },
+    { nombre: 'Patada', id: 'boton-patada' },
+    { nombre: 'Barrida', id: 'boton-barrida' }
+)
+
+toph.ataques.push(
+    { nombre: 'Punio', id: 'boton-punio' },
+    { nombre: 'Patada', id: 'boton-patada' },
+    { nombre: 'Barrida', id: 'boton-barrida' }
+)
+
 function iniciarJuego() {
     
     sectionSeleccionarAtaque.style.display = 'none'
