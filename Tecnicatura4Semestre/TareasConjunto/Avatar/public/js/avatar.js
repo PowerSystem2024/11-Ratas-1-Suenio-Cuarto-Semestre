@@ -29,10 +29,10 @@ class Avatar {
     }
 }
 
-let zuko = new Avatar('Zuko', './assets/Zuko.png', 5)
-let katara = new Avatar('Katara', './assets/Katara.png', 5)
-let aang = new Avatar('Aang', './assets/Aang.png', 5)
-let toph = new Avatar('Toph', './assets/Toph.png', 5)
+let zuko = new Avatar('Zuko', './assets/Zuko.png', 3)
+let katara = new Avatar('Katara', './assets/Katara.png', 3)
+let aang = new Avatar('Aang', './assets/Aang.png', 3)
+let toph = new Avatar('Toph', './assets/Toph.png', 3)
 
 zuko.ataques.push(
     { nombre: 'Punioo', id: 'boton-punio' },
@@ -69,12 +69,14 @@ function iniciarJuego() {
 
     document.getElementById("reglas-del-juego").style.display = "none";
     document.getElementById('boton-reglas').addEventListener('click', mostrarReglas);
-    document.getElementById('boton-jugar').style.display = 'none';
-    document.getElementById('seleccionar-personaje').style.display = 'block';
+    //document.getElementById('boton-jugar').style.display = 'none';
+    //document.getElementById('seleccionar-personaje').style.display = 'block';
+    
     // Botones de ataque
-    document.getElementById('boton-punio').addEventListener('click', () => ataque("Punio"))
-    document.getElementById('boton-patada').addEventListener('click', () => ataque("Patada"))
-    document.getElementById('boton-barrida').addEventListener('click', () => ataque("Barrida"))
+    //document.getElementById('boton-punio').addEventListener('click', () => ataque("Punio"))
+    //document.getElementById('boton-patada').addEventListener('click', () => ataque("Patada"))
+    //document.getElementById('boton-barrida').addEventListener('click', () => ataque("Barrida"))
+    
     // Botón reiniciar
     document.getElementById('boton-reiniciar').addEventListener('click', reiniciarJuego)
 }
@@ -195,9 +197,13 @@ function crearMensajeFinal(resultado) {
     document.getElementById('reiniciar').style.display = "block"
     parrafo.innerHTML = resultado
     sectionMensaje.appendChild(parrafo)
-    document.getElementById('boton-punio').disabled = true
-    document.getElementById('boton-patada').disabled = true
-    document.getElementById('boton-barrida').disabled = true
+
+    //document.getElementById('boton-punio').disabled = true
+    //document.getElementById('boton-patada').disabled = true
+    //document.getElementById('boton-barrida').disabled = true
+
+    const botonesAtaque = document.querySelectorAll("#contenedor-ataques button")
+    botonesAtaque.forEach(boton => boton.disabled = true)
 }
 
 function crearMensaje(resultado) {
