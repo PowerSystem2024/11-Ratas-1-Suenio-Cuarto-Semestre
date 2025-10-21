@@ -1,123 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perfil de Usuario</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header>
-    <h1>Para Logo</h1>
-    <nav class="nav">
-      <div class="menu-toggle" id="menu-toggle">☰</div>
-      <ul id="menu">
-        <li><a href="#" class="activo" id="tab-perfil">Perfil de Usuario</a></li>
-        <li><a href="#" id="tab-historial">Historial de Pedidos</a></li>
-        <li><a href="#">Cerrar Sesión</a></li>
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Para Logo</h1>
+      <nav class="nav">
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <ul id="menu">
+          <li><a href="#" class="activo" id="tab-perfil">Perfil de Usuario</a></li>
+          <li><a href="#" id="tab-historial">Historial de Pedidos</a></li>
+          <li><a href="#">Cerrar Sesión</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <section class="perfil" id="perfil">
-      <h2>Datos Personales</h2>
-      <div class="perfil-container">
-        <!-- Datos -->
-        <div class="datos-personales">
-          <div><label>Nombre:</label><input type="text" value=" " readonly /></div>
-          <div><label>Email:</label><input type="email" value=" " readonly /></div>
-          <div><label>Teléfono:</label><input type="text" value=" " readonly /></div>
-          <div><label>Dirección:</label><input type="text" value=" " readonly /></div>
-          <button class="editar" id="btn-editar">Modificar Datos</button>
+    <main>
+      <section class="perfil" id="perfil">
+        <h2>Datos Personales</h2>
+        <div class="perfil-container">
+
+          <div class="datos-personales">
+            <div><label>Nombre:</label><input type="text" value=" " readonly /></div>
+            <div><label>Email:</label><input type="email" value=" " readonly /></div>
+            <div><label>Teléfono:</label><input type="text" value=" " readonly /></div>
+            <div><label>Dirección:</label><input type="text" value=" " readonly /></div>
+            <button class="editar" id="btn-editar">Modificar Datos</button>
+          </div>
+
+          <div class="imagen-perfil">
+            <img src="rata.png" alt="Imagen del usuario" />
+          </div>
         </div>
-        <!-- Imagen -->
-        <div class="imagen-perfil">
-          <img src="rata.png" alt="Imagen del usuario" />
-        </div>
+      </section>
+
+      <section class="historial oculto" id="historial">
+        <h2>Historial de Pedidos</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>#_____</th><th>--/--/--</th><th>$_____</th><th>_____</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>#____</td><td>--/--/----</td><td>$______</td><td>_____</td></tr>
+            <tr><td>#____</td><td>--/--/----</td><td>$______</td><td>_____</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 11 Ratas | Todos los derechos reservados</p>
+    </footer>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="cerrar">&times;</span>
+        <h3>Modificar Datos</h3>
+        <form id="form-datos">
+          <label>Nombre:</label><input type="text" />
+          <label>Apellido:</label><input type="text" />
+          <label>DNI:</label><input type="text" />
+          <label>CUIL:</label><input type="text" />
+          <label>Calle:</label><input type="text" />
+          <label>Barrio:</label><input type="text" />
+          <label>Departamento:</label><input type="text" />
+          <label>Provincia:</label><input type="text" />
+          <label>Código Postal:</label><input type="text" />
+          <label>País:</label><input type="text" />
+          <button type="submit" class="guardar">Guardar Cambios</button>
+        </form>
       </div>
-    </section>
-
-    <section class="historial oculto" id="historial">
-      <h2>Historial de Pedidos</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>#_____</th><th>--/--/--</th><th>$_____</th><th>_____</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>#____</td><td>--/--/----</td><td>$______</td><td>_____</td></tr>
-          <tr><td>#____</td><td>--/--/----</td><td>$______</td><td>_____</td></tr>
-        </tbody>
-      </table>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 11 Ratas | Todos los derechos reservados</p>
-  </footer>
-
-  <!-- Modal flotante -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="cerrar">&times;</span>
-      <h3>Modificar Datos</h3>
-      <form id="form-datos">
-        <label>Nombre:</label><input type="text" />
-        <label>Apellido:</label><input type="text" />
-        <label>DNI:</label><input type="text" />
-        <label>CUIL:</label><input type="text" />
-        <label>Calle:</label><input type="text" />
-        <label>Barrio:</label><input type="text" />
-        <label>Departamento:</label><input type="text" />
-        <label>Provincia:</label><input type="text" />
-        <label>Código Postal:</label><input type="text" />
-        <label>País:</label><input type="text" />
-        <button type="submit" class="guardar">Guardar Cambios</button>
-      </form>
     </div>
-  </div>
 
-  <script>
-  const tabPerfil = document.getElementById("tab-perfil");
-  const tabHistorial = document.getElementById("tab-historial");
-  const perfil = document.getElementById("perfil");
-  const historial = document.getElementById("historial");
+    <script>
+      const tabPerfil = document.getElementById("tab-perfil");
+      const tabHistorial = document.getElementById("tab-historial");
+      const perfil = document.getElementById("perfil");
+      const historial = document.getElementById("historial");
 
-  // Cambiar de pestaña correctamente
-  tabPerfil.addEventListener("click", (e) => {
-    e.preventDefault();
-    perfil.classList.remove("oculto");
-    historial.classList.add("oculto");
-    tabPerfil.classList.add("activo");
-    tabHistorial.classList.remove("activo");
-  });
+      tabPerfil.addEventListener("click", (e) => {
+        e.preventDefault();
+        perfil.classList.remove("oculto");
+        historial.classList.add("oculto");
+        tabPerfil.classList.add("activo");
+        tabHistorial.classList.remove("activo");
+      });
 
-  tabHistorial.addEventListener("click", (e) => {
-    e.preventDefault();
-    historial.classList.remove("oculto");
-    perfil.classList.add("oculto");
-    tabHistorial.classList.add("activo");
-    tabPerfil.classList.remove("activo");
-  });
+      tabHistorial.addEventListener("click", (e) => {
+        e.preventDefault();
+        historial.classList.remove("oculto");
+        perfil.classList.add("oculto");
+        tabHistorial.classList.add("activo");
+        tabPerfil.classList.remove("activo");
+      });
 
-  // Menú hamburguesa
-  const toggle = document.getElementById("menu-toggle");
-  const menu = document.getElementById("menu");
-  toggle.addEventListener("click", () => menu.classList.toggle("mostrar"));
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("menu");
+      toggle.addEventListener("click", () => menu.classList.toggle("mostrar"));
 
-  // Modal editar datos
-  const modal = document.getElementById("modal");
-  const btnEditar = document.getElementById("btn-editar");
-  const cerrar = document.querySelector(".cerrar");
+      const modal = document.getElementById("modal");
+      const btnEditar = document.getElementById("btn-editar");
+      const cerrar = document.querySelector(".cerrar");
 
-  btnEditar.onclick = () => modal.style.display = "block";
-  cerrar.onclick = () => modal.style.display = "none";
-  window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
-  </script>
+      btnEditar.onclick = () => modal.style.display = "block";
+      cerrar.onclick = () => modal.style.display = "none";
+      window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+    </script>
 
-</body>
+  </body>
 
 </html>
 

@@ -5,7 +5,6 @@
   --blanco: #ffffff;
 }
 
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +20,6 @@ body {
   flex-direction: column;
 }
 
-/* Header */
 header {
   background-color: var(--gris-oscuro);
   padding: 1rem 2rem;
@@ -33,7 +31,6 @@ header h1 {
   color: var(--dorado);
 }
 
-/* Navegación */
 .nav ul {
   list-style: none;
   display: flex;
@@ -72,16 +69,14 @@ header h1 {
   .menu-toggle { display: block; }
 }
 
-/* Perfil */
 .perfil-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
-  flex-wrap: wrap; /* permite que los elementos bajen si no entran */
+  flex-wrap: wrap; 
 }
 
-/* Para pantallas pequeñas */
 @media (max-width: 768px) {
   .perfil-container {
     flex-direction: column;
@@ -98,7 +93,7 @@ header h1 {
     margin-top: 1rem;
   }
 }
-/* Inputs */
+
 input {
   width: 100%;
   padding: 0.5rem;
@@ -112,7 +107,6 @@ input:focus {
   border-color: var(--dorado);
 }
 
-/* Botones */
 button {
   background-color: transparent;
   border: 2px solid var(--dorado);
@@ -128,7 +122,6 @@ button:hover {
   color: var(--grafito);
 }
 
-/* Modal flotante */
 .modal {
   display: none;
   position: fixed;
@@ -157,7 +150,10 @@ button:hover {
   color: var(--blanco);
 }
 
-/* Footer */
+.oculto {
+  display: none;
+}
+
 footer {
   background-color: var(--gris-oscuro);
   text-align: center;
