@@ -25,6 +25,13 @@ function showCountDown(){
     }
 }
 
+var cover = document.getElementById("cover");
+cover.addEventListener("click", function(){
+    if (this.className == "box") { this.classList.add("opened")} //If (this.className == "box") this.classList.add("opened") esto tenia el profesro pero daba error por no tener las {}
+    else {this.classList.remove("opened");                       //else this.classList.remove("opened");
+  }
+});
+
 var cover = document.getElementById("activate");
 activate.addEventListener("click", function (){
     this.classList.add("pushed");
@@ -37,4 +44,42 @@ activate.addEventListener("click", function (){
         alarm.load();
         alarm.play();
     }, 500);
+});
+
+var abort = document.getElementById("abort");
+abort.addEventListener("click", function (){
+    btn.classList.remove("pushed");
+    panel.classList.remove("show");
+    clearInterval(theCount);
+    time.innerText = 9;
+    alarm.pause();
+    alarm.currentTime = 10;
+    alarm.load();
+});
+var reload = document.getElementById("restart");
+reload.addEventListener("click", function (){
+    panel.classList.remove("show");
+    turnOff.classList.remove("close");
+    turnoffHor.classList.remove("close");
+    abort.classList.remove("hide");
+    detonate.classList.remove("show");
+    cover.classList.remove("opened");
+    btn.classList.remove("pushed");
+    this.classList.remove("show");
+    time.classList.remove("crono");
+    time.innerText = 9;
+});
+
+setTimeout(function (){
+    cover.classList.remove("opened");
+}, 100);
+
+var mute = document.getElementById("mute");
+mute.addEventListener("click", function () {
+    if (this.className= "muted") { 
+        alarm.muted = false;
+    } else {
+        alarm.muted = true;
+        this.classList.add("muted");
+    } 
 });
