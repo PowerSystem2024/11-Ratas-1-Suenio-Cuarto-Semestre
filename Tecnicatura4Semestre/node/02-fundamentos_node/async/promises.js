@@ -22,7 +22,8 @@ function adios(nombre){
             //validamos el error o aprobación
             console.log( `Adios`+ nombre);
             //if(err) reject (`hay un error`);
-            resolve();
+            //resolve();
+            reject('Hay un error');
         }, 1000);
     });
 }

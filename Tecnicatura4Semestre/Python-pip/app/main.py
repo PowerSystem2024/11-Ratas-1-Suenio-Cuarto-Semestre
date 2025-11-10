@@ -26,3 +26,4 @@ def run():
     result = utils.population_by_country(data, country)
     if len(result) > 0:
         country = result[0]
+        

@@ -15,7 +15,6 @@ setInterval(() => {});
 
 Da prioridad de ejecucion a una funcion asincronica
 setImmdiate(() => {});*/
-
 //console.log(setInterval);
 
 let i=0;

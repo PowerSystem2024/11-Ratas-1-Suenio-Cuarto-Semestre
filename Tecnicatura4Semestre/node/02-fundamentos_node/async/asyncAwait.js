@@ -29,8 +29,7 @@ async function adios(nombre){
     });
 }
 
-//await Hola (`Ariel); 
-//esto es una mañla sintaxis
+//await Hola (`Ariel); //esto es una mala sintaxis
 //await solo es valido dentro de una funcion asincrona
 //Se puede usar una funcion async sin await pero no viceversa
 
